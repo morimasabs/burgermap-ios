@@ -22,8 +22,18 @@ struct MapView: View {
                     .annotationTitles(.hidden)
                 }
             }
-            if reposStore.shops.isEmpty {
+            
+            switch reposStore.state {
+            case .loading:
                 IndicatorView()
+            case .failed:
+                FailureView {
+                    Task {
+                        await reposStore.loadShops()
+                    }
+                }
+            case .loaded:
+                EmptyView()
             }
         }
         .task {
@@ -34,23 +44,32 @@ struct MapView: View {
 
 @MainActor
 class ShopsStore: ObservableObject {
+    @Published private(set) var state: Stateful = .loading
     @Published private(set) var shops = [Shop]()
- 
+    
     func loadShops() async {
-        
         let url = URL(string: "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=\(Credentials.apiKey)&keyword=バーガー&lat=35.6581&lng=139.7017&format=json")!
-
+        
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
         urlRequest.allHTTPHeaderFields = [
             "Accept": "application/json"
         ]
-
-        let (data, _) = try! await URLSession.shared.data(for: urlRequest)
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        let response = try! decoder.decode(ShopResponse.self, from: data)
-        shops = response.results.shop
+        
+        do {
+            let (data, response) = try await URLSession.shared.data(for: urlRequest)
+            guard let response = response as? HTTPURLResponse,
+                  response.statusCode == 200 else {
+                throw URLError(.badServerResponse)
+            }
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let value = try decoder.decode(ShopResponse.self, from: data)
+            shops = value.results.shop
+            state = .loaded
+        } catch {
+            state = .failed(error)
+        }
     }
 }
 
