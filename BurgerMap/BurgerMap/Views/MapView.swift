@@ -13,12 +13,17 @@ struct MapView: View {
     @State private(set) var shops = [Shop]()
     
     var body: some View {
-        Map(initialPosition: cameraPosition) {
-            ForEach(shops) { shop in
-                Annotation("", coordinate: shop.coordinate) {
-                    Image("burger")
+        ZStack {
+            Map(initialPosition: cameraPosition) {
+                ForEach(shops) { shop in
+                    Annotation("", coordinate: shop.coordinate) {
+                        Image("burger")
+                    }
+                    .annotationTitles(.hidden)
                 }
-                .annotationTitles(.hidden)
+            }
+            if shops.isEmpty {
+                IndicatorView()
             }
         }
         .task {
