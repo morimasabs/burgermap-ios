@@ -10,16 +10,34 @@ import MapKit
 
 struct MapView: View {
     private let cameraPosition = MapCameraPosition.samplePosition
-    private let shops: [Shop] = [.mock1, .mock2, .mock3, .mock4, .mock5]
+    @StateObject private var viewModel = ShopViewModel()
     
     var body: some View {
-        Map(initialPosition: cameraPosition) {
-            ForEach(shops) { shop in
-                Annotation("", coordinate: shop.coordinate) {
-                    Image("burger")
+        ZStack {
+            Map(initialPosition: cameraPosition) {
+                ForEach(viewModel.shops) { shop in
+                    Annotation("", coordinate: shop.coordinate) {
+                        Image("burger")
+                    }
+                    .annotationTitles(.hidden)
                 }
-                .annotationTitles(.hidden)
             }
+            
+            switch viewModel.state {
+            case .loading:
+                IndicatorView()
+            case .failed:
+                FailureView {
+                    Task {
+                        await viewModel.onRetryButtonTapped()
+                    }
+                }
+            case .loaded:
+                EmptyView()
+            }
+        }
+        .task {
+            await viewModel.onAppear()
         }
     }
 }
