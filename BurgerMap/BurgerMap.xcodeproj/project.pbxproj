@@ -91,8 +91,8 @@
 		3EA9F0642B4B97C8002206EE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3EA9F05D2B4691BB002206EE /* MapView.swift */,
 				3EA9F0512B468EA3002206EE /* ContentView.swift */,
+				3EA9F05D2B4691BB002206EE /* MapView.swift */,
 				3EA9F06A2B4BA17F002206EE /* IndicatorView.swift */,
 			);
 			path = Views;

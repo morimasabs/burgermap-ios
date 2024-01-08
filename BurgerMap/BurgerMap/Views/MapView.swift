@@ -27,11 +27,11 @@ struct MapView: View {
             }
         }
         .task {
-            await loadRepos()
+            await loadShops()
         }
     }
     
-    private func loadRepos() async {
+    private func loadShops() async {
         try! await Task.sleep(nanoseconds: 2_000_000_000)
         shops = [.mock1, .mock2, .mock3, .mock4, .mock5]
     }
