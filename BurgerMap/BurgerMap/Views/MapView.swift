@@ -10,28 +10,32 @@ import MapKit
 
 struct MapView: View {
     private let cameraPosition = MapCameraPosition.samplePosition
-    @State private(set) var shops = [Shop]()
+    @StateObject private var reposStore = ShopsStore()
     
     var body: some View {
         ZStack {
             Map(initialPosition: cameraPosition) {
-                ForEach(shops) { shop in
+                ForEach(reposStore.shops) { shop in
                     Annotation("", coordinate: shop.coordinate) {
                         Image("burger")
                     }
                     .annotationTitles(.hidden)
                 }
             }
-            if shops.isEmpty {
+            if reposStore.shops.isEmpty {
                 IndicatorView()
             }
         }
         .task {
-            await loadShops()
+            await reposStore.loadShops()
         }
     }
-    
-    private func loadShops() async {
+}
+
+class ShopsStore: ObservableObject {
+    @Published private(set) var shops = [Shop]()
+ 
+    func loadShops() async {
         try! await Task.sleep(nanoseconds: 2_000_000_000)
         shops = [.mock1, .mock2, .mock3, .mock4, .mock5]
     }
