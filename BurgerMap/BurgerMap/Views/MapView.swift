@@ -9,8 +9,7 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
-    private let cameraPosition: MapCameraPosition = MapCameraPosition.camera(MapCamera(centerCoordinate: CLLocationCoordinate2D(latitude: 35.6581, longitude: 139.7017), distance: 2000))
-    
+    private let cameraPosition = MapCameraPosition.samplePosition
     private let shops: [Shop] = [.mock1, .mock2, .mock3, .mock4, .mock5]
     
     var body: some View {
