@@ -16,6 +16,7 @@
 		3EA9F0632B4B9331002206EE /* Shop+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9F0622B4B9331002206EE /* Shop+mock.swift */; };
 		3EA9F0692B4B991B002206EE /* MapCameraPosition+Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9F0682B4B991B002206EE /* MapCameraPosition+Sample.swift */; };
 		3EA9F06B2B4BA17F002206EE /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9F06A2B4BA17F002206EE /* IndicatorView.swift */; };
+		3EA9F06D2B4BCE1C002206EE /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9F06C2B4BCE1C002206EE /* Credentials.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		3EA9F0622B4B9331002206EE /* Shop+mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shop+mock.swift"; sourceTree = "<group>"; };
 		3EA9F0682B4B991B002206EE /* MapCameraPosition+Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapCameraPosition+Sample.swift"; sourceTree = "<group>"; };
 		3EA9F06A2B4BA17F002206EE /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		3EA9F06C2B4BCE1C002206EE /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Credentials.swift; path = BurgerMap/Credentials.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				3EA9F0642B4B97C8002206EE /* Views */,
 				3EA9F05F2B4B91E7002206EE /* Models */,
 				3EA9F0672B4B9859002206EE /* Extensions */,
+				3EA9F06C2B4BCE1C002206EE /* Credentials.swift */,
 				3EA9F0532B468EA4002206EE /* Assets.xcassets */,
 				3EA9F0552B468EA4002206EE /* Preview Content */,
 			);
@@ -178,6 +181,7 @@
 			files = (
 				3EA9F0522B468EA3002206EE /* ContentView.swift in Sources */,
 				3EA9F05E2B4691BC002206EE /* MapView.swift in Sources */,
+				3EA9F06D2B4BCE1C002206EE /* Credentials.swift in Sources */,
 				3EA9F0692B4B991B002206EE /* MapCameraPosition+Sample.swift in Sources */,
 				3EA9F06B2B4BA17F002206EE /* IndicatorView.swift in Sources */,
 				3EA9F0502B468EA3002206EE /* BurgerMapApp.swift in Sources */,

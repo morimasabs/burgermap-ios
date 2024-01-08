@@ -32,12 +32,25 @@ struct MapView: View {
     }
 }
 
+@MainActor
 class ShopsStore: ObservableObject {
     @Published private(set) var shops = [Shop]()
  
     func loadShops() async {
-        try! await Task.sleep(nanoseconds: 2_000_000_000)
-        shops = [.mock1, .mock2, .mock3, .mock4, .mock5]
+        
+        let url = URL(string: "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=\(Credentials.apiKey)&keyword=バーガー&lat=35.6581&lng=139.7017&format=json")!
+
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "GET"
+        urlRequest.allHTTPHeaderFields = [
+            "Accept": "application/json"
+        ]
+
+        let (data, _) = try! await URLSession.shared.data(for: urlRequest)
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        let response = try! decoder.decode(ShopResponse.self, from: data)
+        shops = response.results.shop
     }
 }
 

@@ -7,15 +7,23 @@
 
 import CoreLocation
 
-struct Shop: Identifiable {
-    var id: Int
+struct ShopResponse: Decodable {
+    var results: Results
+}
+
+struct Results: Decodable {
+    var shop: [Shop]
+}
+
+struct Shop: Identifiable, Decodable {
+    var id: String
     var name: String
     var lat: Double
-    var lon: Double
+    var lng: Double
 }
 
 extension Shop {
     var coordinate: CLLocationCoordinate2D {
-        .init(latitude: lat, longitude: lon)
+        .init(latitude: lat, longitude: lng)
     }
 }
