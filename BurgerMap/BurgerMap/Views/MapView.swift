@@ -10,11 +10,13 @@ import MapKit
 
 struct MapView: View {
     private let cameraPosition = MapCameraPosition.samplePosition
+    private let locationManager = LocationManager()
     @StateObject private var viewModel = ShopViewModel()
     
     var body: some View {
         ZStack {
             Map(initialPosition: cameraPosition) {
+                UserAnnotation()
                 ForEach(viewModel.shops) { shop in
                     Annotation("", coordinate: shop.coordinate) {
                         Image("burger")

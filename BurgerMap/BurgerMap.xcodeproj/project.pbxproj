@@ -21,6 +21,8 @@
 		3EA9F0722B4BFA21002206EE /* FailureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9F0712B4BFA21002206EE /* FailureView.swift */; };
 		3EA9F0752B4C0006002206EE /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9F0742B4C0006002206EE /* ShopViewModel.swift */; };
 		3EA9F0782B4C007C002206EE /* ShopAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9F0772B4C007C002206EE /* ShopAPIClient.swift */; };
+		3EA9F07A2B4C093C002206EE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9F0792B4C093C002206EE /* LocationManager.swift */; };
+		3EA9F07C2B4C0C55002206EE /* CLLocationCoordinate2D+Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9F07B2B4C0C55002206EE /* CLLocationCoordinate2D+Sample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		3EA9F0712B4BFA21002206EE /* FailureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailureView.swift; sourceTree = "<group>"; };
 		3EA9F0742B4C0006002206EE /* ShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewModel.swift; sourceTree = "<group>"; };
 		3EA9F0772B4C007C002206EE /* ShopAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopAPIClient.swift; sourceTree = "<group>"; };
+		3EA9F0792B4C093C002206EE /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		3EA9F07B2B4C0C55002206EE /* CLLocationCoordinate2D+Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Sample.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				3EA9F04F2B468EA3002206EE /* BurgerMapApp.swift */,
+				3EA9F0792B4C093C002206EE /* LocationManager.swift */,
 				3EA9F0642B4B97C8002206EE /* Views */,
 				3EA9F05F2B4B91E7002206EE /* Models */,
 				3EA9F0732B4BFFD5002206EE /* ViewModels */,
@@ -117,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				3EA9F0682B4B991B002206EE /* MapCameraPosition+Sample.swift */,
+				3EA9F07B2B4C0C55002206EE /* CLLocationCoordinate2D+Sample.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -218,6 +224,7 @@
 				3EA9F0522B468EA3002206EE /* ContentView.swift in Sources */,
 				3EA9F0722B4BFA21002206EE /* FailureView.swift in Sources */,
 				3EA9F05E2B4691BC002206EE /* MapView.swift in Sources */,
+				3EA9F07C2B4C0C55002206EE /* CLLocationCoordinate2D+Sample.swift in Sources */,
 				3EA9F06D2B4BCE1C002206EE /* Credentials.swift in Sources */,
 				3EA9F0692B4B991B002206EE /* MapCameraPosition+Sample.swift in Sources */,
 				3EA9F0782B4C007C002206EE /* ShopAPIClient.swift in Sources */,
@@ -227,6 +234,7 @@
 				3EA9F0612B4B91FA002206EE /* Shop.swift in Sources */,
 				3EA9F0752B4C0006002206EE /* ShopViewModel.swift in Sources */,
 				3EA9F0632B4B9331002206EE /* Shop+mock.swift in Sources */,
+				3EA9F07A2B4C093C002206EE /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +371,8 @@
 				DEVELOPMENT_TEAM = U846247ZJT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BurgerMap/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "現在地の表示および周辺検索に使用します。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -392,6 +402,8 @@
 				DEVELOPMENT_TEAM = U846247ZJT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BurgerMap/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "現在地の表示および周辺検索に使用します。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
