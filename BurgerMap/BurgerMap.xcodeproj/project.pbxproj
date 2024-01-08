@@ -58,8 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				3EA9F04F2B468EA3002206EE /* BurgerMapApp.swift */,
-				3EA9F0512B468EA3002206EE /* ContentView.swift */,
-				3EA9F05D2B4691BB002206EE /* MapView.swift */,
+				3EA9F0642B4B97C8002206EE /* Views */,
 				3EA9F05F2B4B91E7002206EE /* Models */,
 				3EA9F0532B468EA4002206EE /* Assets.xcassets */,
 				3EA9F0552B468EA4002206EE /* Preview Content */,
@@ -82,6 +81,15 @@
 				3EA9F0602B4B91FA002206EE /* Shop.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3EA9F0642B4B97C8002206EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3EA9F05D2B4691BB002206EE /* MapView.swift */,
+				3EA9F0512B468EA3002206EE /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
