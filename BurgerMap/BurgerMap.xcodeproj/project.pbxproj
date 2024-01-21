@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E7F72A92B5CF90E00922DB8 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F72A82B5CF90E00922DB8 /* BottomSheetView.swift */; };
 		3EA9F0502B468EA3002206EE /* BurgerMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9F04F2B468EA3002206EE /* BurgerMapApp.swift */; };
 		3EA9F0522B468EA3002206EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9F0512B468EA3002206EE /* ContentView.swift */; };
 		3EA9F0542B468EA4002206EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EA9F0532B468EA4002206EE /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E7F72A82B5CF90E00922DB8 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		3EA9F04C2B468EA3002206EE /* BurgerMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurgerMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA9F04F2B468EA3002206EE /* BurgerMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMapApp.swift; sourceTree = "<group>"; };
 		3EA9F0512B468EA3002206EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			children = (
 				3EA9F0512B468EA3002206EE /* ContentView.swift */,
 				3EA9F05D2B4691BB002206EE /* MapView.swift */,
+				3E7F72A82B5CF90E00922DB8 /* BottomSheetView.swift */,
 				3EA9F06A2B4BA17F002206EE /* IndicatorView.swift */,
 				3EA9F0712B4BFA21002206EE /* FailureView.swift */,
 			);
@@ -232,6 +235,7 @@
 				3EA9F06B2B4BA17F002206EE /* IndicatorView.swift in Sources */,
 				3EA9F0502B468EA3002206EE /* BurgerMapApp.swift in Sources */,
 				3EA9F0612B4B91FA002206EE /* Shop.swift in Sources */,
+				3E7F72A92B5CF90E00922DB8 /* BottomSheetView.swift in Sources */,
 				3EA9F0752B4C0006002206EE /* ShopViewModel.swift in Sources */,
 				3EA9F0632B4B9331002206EE /* Shop+mock.swift in Sources */,
 				3EA9F07A2B4C093C002206EE /* LocationManager.swift in Sources */,
