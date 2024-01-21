@@ -11,11 +11,21 @@ struct BottomSheetView: View {
     let shop: Shop
     
     var body: some View {
-        VStack {
-            Text(shop.name)
-            Text("name")
-            Text("name")
+        VStack(alignment: .leading) {
+            HStack {
+                Image("burger")
+                Text(shop.name)
+                    .font(.system(size: 28))
+                    .fontWeight(.heavy)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            Text("住所：hogehoge")
+                .font(.system(size: 20))
+                .fontWeight(.bold)
         }
+        .padding(.horizontal, 20)
+        .padding(.top, 16)
+        Spacer()
     }
 }
 
