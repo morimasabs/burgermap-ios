@@ -16,6 +16,10 @@ class ShopViewModel: ObservableObject {
         await loadShops()
     }
     
+    func onChange() async {
+        await loadShops()
+    }
+    
     func onRetryButtonTapped() async {
         await loadShops()
     }

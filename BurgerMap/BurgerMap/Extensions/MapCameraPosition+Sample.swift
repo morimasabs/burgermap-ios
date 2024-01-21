@@ -9,5 +9,5 @@ import SwiftUI
 import MapKit
 
 extension MapCameraPosition {
-    static let samplePosition = Self.camera(MapCamera(centerCoordinate: .sampleCoordinate, distance: 2000))
+    static let samplePosition = Self.camera(MapCamera(centerCoordinate: .sampleCoordinate, distance: 10000))
 }

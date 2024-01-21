@@ -6,11 +6,16 @@
 //
 
 import CoreLocation
+import SwiftUI
+import MapKit
 
-final class LocationManager: NSObject {
+final class LocationManager: NSObject, ObservableObject {
+    static let shared = LocationManager()
     private let locationManager = CLLocationManager()
-    // 現在地
+    
     private(set) var currentCoordinate: CLLocationCoordinate2D = .sampleCoordinate
+    @Published private(set) var authorizationStatus: CLAuthorizationStatus = .notDetermined
+    @Published var cameraPosition: MapCameraPosition = .samplePosition
     
     override init() {
         super.init()
@@ -19,13 +24,11 @@ final class LocationManager: NSObject {
         // 5m移動したら、位置情報を通知
         locationManager.distanceFilter = 5.0
     }
-    
-    // 現在地を取得する
-    func getCurrentLocation() -> CLLocationCoordinate2D { currentCoordinate }
 }
 
 extension LocationManager: CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        authorizationStatus = manager.authorizationStatus
         switch manager.authorizationStatus {
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
@@ -42,5 +45,6 @@ extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         currentCoordinate = location.coordinate
+        cameraPosition = MapCameraPosition.camera(MapCamera(centerCoordinate: currentCoordinate, distance: 10000))
     }
 }

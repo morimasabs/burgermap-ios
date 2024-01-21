@@ -6,10 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct ShopAPIClient {
+
     func getShops() async throws -> [Shop] {
-       let url = URL(string: "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=\(Credentials.apiKey)&keyword=バーガー&lat=35.6581&lng=139.7017&format=json")!
+        let coordinate = LocationManager.shared.currentCoordinate
+        let url = URL(string: "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=\(Credentials.apiKey)&keyword=バーガー&lat=\(coordinate.latitude)&lng=\(coordinate.longitude)&format=json")!
         
        var urlRequest = URLRequest(url: url)
        urlRequest.httpMethod = "GET"

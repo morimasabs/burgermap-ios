@@ -9,14 +9,15 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
-    private let cameraPosition = MapCameraPosition.samplePosition
-    private let locationManager = LocationManager()
     @StateObject private var viewModel = ShopViewModel()
+    @StateObject private var locationManager = LocationManager.shared
     
     var body: some View {
         ZStack {
-            Map(initialPosition: cameraPosition) {
-                UserAnnotation()
+            Map(position: $locationManager.cameraPosition) {
+                if locationManager.authorizationStatus == .authorizedAlways || locationManager.authorizationStatus == .authorizedWhenInUse {
+                    UserAnnotation()
+                }
                 ForEach(viewModel.shops) { shop in
                     Annotation("", coordinate: shop.coordinate) {
                         Image("burger")
@@ -40,6 +41,11 @@ struct MapView: View {
         }
         .task {
             await viewModel.onAppear()
+        }
+        .onChange(of: locationManager.authorizationStatus) {
+            Task {
+                await viewModel.onChange()
+            }
         }
     }
 }
