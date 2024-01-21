@@ -32,7 +32,8 @@ struct MapView: View {
                 }
             }.sheet(isPresented: $showBottomSheet, content: {
                 BottomSheetView(shop: selectedShop)
-                    .presentationDetents([.medium])
+                    .presentationDetents([.medium, .large])
+                    .presentationDragIndicator(.visible)
             })
             
             switch viewModel.state {
