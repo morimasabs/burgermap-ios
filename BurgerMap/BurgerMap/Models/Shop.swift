@@ -18,6 +18,9 @@ struct Results: Decodable {
 struct Shop: Identifiable, Decodable {
     var id: String
     var name: String
+    var address: String
+    var open: String
+    var close: String
     var lat: Double
     var lng: Double
 }

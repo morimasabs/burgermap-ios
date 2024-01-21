@@ -15,13 +15,19 @@ struct BottomSheetView: View {
             HStack {
                 Image("burger")
                 Text(shop.name)
-                    .font(.system(size: 28))
+                    .font(.system(size: 24))
                     .fontWeight(.heavy)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            Text("住所：hogehoge")
-                .font(.system(size: 20))
-                .fontWeight(.bold)
+            Text("住所：\(shop.address)")
+                .font(.system(size: 16))
+                .fontWeight(.regular)
+            Text("営業時間：\(shop.open)")
+                .font(.system(size: 16))
+                .fontWeight(.regular)
+            Text("定休日：\(shop.close)")
+                .font(.system(size: 16))
+                .fontWeight(.regular)
         }
         .padding(.horizontal, 20)
         .padding(.top, 16)
