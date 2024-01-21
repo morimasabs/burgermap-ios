@@ -11,6 +11,7 @@ import MapKit
 struct MapView: View {
     @StateObject private var viewModel = ShopViewModel()
     @StateObject private var locationManager = LocationManager.shared
+    @State private var showBottomSheet = false
     
     var body: some View {
         ZStack {
@@ -21,10 +22,16 @@ struct MapView: View {
                 ForEach(viewModel.shops) { shop in
                     Annotation("", coordinate: shop.coordinate) {
                         Image("burger")
+                            .onTapGesture {
+                                showBottomSheet = true
+                            }
                     }
                     .annotationTitles(.hidden)
                 }
-            }
+            }.sheet(isPresented: $showBottomSheet, content: {
+                Text("Sheet!!")
+                    .presentationDetents([.medium])
+            })
             
             switch viewModel.state {
             case .loading:
