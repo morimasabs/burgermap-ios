@@ -31,7 +31,7 @@ struct MapView: View {
                     .annotationTitles(.hidden)
                 }
             }.sheet(isPresented: $showBottomSheet, content: {
-                BottomSheetView(shop: selectedShop)
+                BottomSheetView(shop: $selectedShop)
                     .presentationDetents([.medium, .large])
                     .presentationDragIndicator(.visible)
             })

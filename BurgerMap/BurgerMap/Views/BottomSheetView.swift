@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BottomSheetView: View {
-    let shop: Shop
+    @Binding var shop: Shop
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -30,5 +30,5 @@ struct BottomSheetView: View {
 }
 
 #Preview {
-    BottomSheetView(shop: .mock1)
+    BottomSheetView(shop: .constant(.mock1))
 }
