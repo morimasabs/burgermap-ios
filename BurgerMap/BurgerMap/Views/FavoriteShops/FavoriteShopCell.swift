@@ -12,10 +12,12 @@ struct FavoriteShopCell: View {
     
     var body: some View {
         HStack {
-            Image("burger")
+            Image("BurgerIcon")
             VStack(alignment: .leading) {
                 Text(shop.name)
+                    .font(.system(size: 20))
                 Text(shop.address)
+                    .font(.system(size: 16))
             }
         }
     }

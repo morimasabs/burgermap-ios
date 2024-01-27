@@ -13,7 +13,7 @@ struct BottomSheetView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Image("burger")
+                Image("BurgerIcon")
                 Text(shop.name)
                     .font(.system(size: 20))
                     .fontWeight(.heavy)
