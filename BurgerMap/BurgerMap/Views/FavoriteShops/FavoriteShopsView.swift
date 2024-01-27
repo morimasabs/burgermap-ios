@@ -13,13 +13,7 @@ struct FavoriteShopsView: View {
     var body: some View {
         NavigationStack {
             List(shops) { shop in
-                HStack {
-                    Image("burger")
-                    VStack(alignment: .leading) {
-                        Text(shop.name)
-                        Text(shop.address)
-                    }
-                }
+                FavoriteShopCell(shop: shop)
             }
             .listStyle(.plain)
             .navigationTitle("お気に入り")

@@ -25,6 +25,7 @@
 		3EA9F07A2B4C093C002206EE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9F0792B4C093C002206EE /* LocationManager.swift */; };
 		3EA9F07C2B4C0C55002206EE /* CLLocationCoordinate2D+Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9F07B2B4C0C55002206EE /* CLLocationCoordinate2D+Sample.swift */; };
 		3EDAD69A2B652AB5000071B6 /* FavoriteShopsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAD6992B652AB5000071B6 /* FavoriteShopsView.swift */; };
+		3EDAD69F2B6530C3000071B6 /* FavoriteShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAD69E2B6530C3000071B6 /* FavoriteShopCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		3EA9F0792B4C093C002206EE /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		3EA9F07B2B4C0C55002206EE /* CLLocationCoordinate2D+Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Sample.swift"; sourceTree = "<group>"; };
 		3EDAD6992B652AB5000071B6 /* FavoriteShopsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteShopsView.swift; sourceTree = "<group>"; };
+		3EDAD69E2B6530C3000071B6 /* FavoriteShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteShopCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				3EDAD6992B652AB5000071B6 /* FavoriteShopsView.swift */,
+				3EDAD69E2B6530C3000071B6 /* FavoriteShopCell.swift */,
 			);
 			path = FavoriteShops;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				3EA9F07C2B4C0C55002206EE /* CLLocationCoordinate2D+Sample.swift in Sources */,
 				3EA9F06D2B4BCE1C002206EE /* Credentials.swift in Sources */,
 				3EA9F0692B4B991B002206EE /* MapCameraPosition+Sample.swift in Sources */,
+				3EDAD69F2B6530C3000071B6 /* FavoriteShopCell.swift in Sources */,
 				3EA9F0782B4C007C002206EE /* ShopAPIClient.swift in Sources */,
 				3EA9F0702B4BF24C002206EE /* Stateful.swift in Sources */,
 				3EA9F06B2B4BA17F002206EE /* IndicatorView.swift in Sources */,
