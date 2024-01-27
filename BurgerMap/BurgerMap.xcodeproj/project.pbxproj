@@ -115,11 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				3EA9F0512B468EA3002206EE /* MainView.swift */,
-				3EDAD6992B652AB5000071B6 /* FavoriteShopsView.swift */,
-				3EA9F05D2B4691BB002206EE /* MapView.swift */,
-				3E7F72A82B5CF90E00922DB8 /* BottomSheetView.swift */,
-				3EA9F06A2B4BA17F002206EE /* IndicatorView.swift */,
-				3EA9F0712B4BFA21002206EE /* FailureView.swift */,
+				3EDAD69B2B652C13000071B6 /* Map */,
+				3EDAD69C2B652C35000071B6 /* FavoriteShops */,
+				3EDAD69D2B652C4E000071B6 /* Common */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,6 +153,32 @@
 				3EA9F0772B4C007C002206EE /* ShopAPIClient.swift */,
 			);
 			path = APIClients;
+			sourceTree = "<group>";
+		};
+		3EDAD69B2B652C13000071B6 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				3EA9F05D2B4691BB002206EE /* MapView.swift */,
+				3E7F72A82B5CF90E00922DB8 /* BottomSheetView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		3EDAD69C2B652C35000071B6 /* FavoriteShops */ = {
+			isa = PBXGroup;
+			children = (
+				3EDAD6992B652AB5000071B6 /* FavoriteShopsView.swift */,
+			);
+			path = FavoriteShops;
+			sourceTree = "<group>";
+		};
+		3EDAD69D2B652C4E000071B6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3EA9F06A2B4BA17F002206EE /* IndicatorView.swift */,
+				3EA9F0712B4BFA21002206EE /* FailureView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
