@@ -1,15 +1,18 @@
 //
-//  SignInView.swift
+//  SignUpView.swift
 //  BurgerMap
 //
-//  Created by Masahito Mori on 2024/02/03.
+//  Created by Masahito Mori on 2024/03/03.
 //
 
 import SwiftUI
 
-struct SignInView: View {
+struct SignUpView: View {
     @State private var email: String = ""
+    @State private var fullName: String = ""
     @State private var password: String = ""
+    @State private var confirmPassword: String = ""
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         NavigationStack {
@@ -23,20 +26,30 @@ struct SignInView: View {
                               placeholder: "name@example.com")
                     .textInputAutocapitalization(.never)
                     
+                    InputView(text: $fullName,
+                              title: "Full Name",
+                              placeholder: "Enter your password")
+                    
                     InputView(text: $password,
                               title: "Password",
+                              placeholder: "Enter your password")
+                    .textInputAutocapitalization(.never)
+                    
+                    InputView(text: $confirmPassword,
+                              title: "Confirm Password",
                               placeholder: "Enter your password",
                               isSecureField: true)
+                    .textInputAutocapitalization(.never)
                 }
                 .padding(.horizontal)
                 .padding(.top, 12)
                 
                 // sign in button
                 Button {
-                    print("Log user in ...")
+                    print("Sign user up ...")
                 } label: {
                     HStack {
-                        Text("サインイン")
+                        Text("会員登録")
                             .fontWeight(.semibold)
                         Image(systemName: "arrow.right")
                     }
@@ -48,23 +61,22 @@ struct SignInView: View {
                 .padding(.top, 24)
                 
                 Spacer()
-                // sign up button
-                NavigationLink {
-                    SignUpView()
-                        .navigationBarBackButtonHidden()
-                } label: {
-                    HStack(spacing: 3) {
-                        Text("パスワードをお忘れですか？")
-                        Text("会員登録")
-                            .fontWeight(.bold)
-                    }
-                    .font(.system(size: 14))
+            }
+            
+            Button {
+                dismiss()
+            } label: {
+                HStack(spacing: 3) {
+                    Text("既にアカウントをお持ちですか？")
+                    Text("ログイン")
+                        .fontWeight(.bold)
                 }
+                .font(.system(size: 14))
             }
         }
     }
 }
 
 #Preview {
-    SignInView()
+    SignUpView()
 }

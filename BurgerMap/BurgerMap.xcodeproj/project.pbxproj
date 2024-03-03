@@ -57,6 +57,7 @@
 		3EE15B202B6E31C400BB72A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EE15B1F2B6E31C400BB72A9 /* GoogleService-Info.plist */; };
 		3EE3E7FB2B940208001BE789 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE3E7FA2B940208001BE789 /* SignInView.swift */; };
 		3EE3E7FE2B940235001BE789 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE3E7FD2B940235001BE789 /* InputView.swift */; };
+		3EE3E8002B94030C001BE789 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE3E7FF2B94030C001BE789 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		3EE15B1F2B6E31C400BB72A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3EE3E7FA2B940208001BE789 /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		3EE3E7FD2B940235001BE789 /* InputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		3EE3E7FF2B94030C001BE789 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				3EE3E7FA2B940208001BE789 /* SignInView.swift */,
+				3EE3E7FF2B94030C001BE789 /* SignUpView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				3EA9F0782B4C007C002206EE /* ShopAPIClient.swift in Sources */,
 				3EA9F0702B4BF24C002206EE /* Stateful.swift in Sources */,
 				3EA9F06B2B4BA17F002206EE /* IndicatorView.swift in Sources */,
+				3EE3E8002B94030C001BE789 /* SignUpView.swift in Sources */,
 				3EE3E7FB2B940208001BE789 /* SignInView.swift in Sources */,
 				3EA9F0502B468EA3002206EE /* BurgerMapApp.swift in Sources */,
 				3EDAD69A2B652AB5000071B6 /* FavoriteShopsView.swift in Sources */,
