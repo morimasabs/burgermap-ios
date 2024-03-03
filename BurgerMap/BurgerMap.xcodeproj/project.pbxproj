@@ -55,6 +55,9 @@
 		3EE15B1A2B6E1D7500BB72A9 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 3EE15B192B6E1D7500BB72A9 /* FirebaseStorageCombine-Community */; };
 		3EE15B1E2B6E279900BB72A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE15B1D2B6E279900BB72A9 /* AppDelegate.swift */; };
 		3EE15B202B6E31C400BB72A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EE15B1F2B6E31C400BB72A9 /* GoogleService-Info.plist */; };
+		3EE3E7FB2B940208001BE789 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE3E7FA2B940208001BE789 /* SignInView.swift */; };
+		3EE3E7FE2B940235001BE789 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE3E7FD2B940235001BE789 /* InputView.swift */; };
+		3EE3E8002B94030C001BE789 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE3E7FF2B94030C001BE789 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +83,9 @@
 		3EDAD69E2B6530C3000071B6 /* FavoriteShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteShopCell.swift; sourceTree = "<group>"; };
 		3EE15B1D2B6E279900BB72A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EE15B1F2B6E31C400BB72A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3EE3E7FA2B940208001BE789 /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		3EE3E7FD2B940235001BE789 /* InputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		3EE3E7FF2B94030C001BE789 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,8 +183,10 @@
 			isa = PBXGroup;
 			children = (
 				3EA9F0512B468EA3002206EE /* MainView.swift */,
+				3EE3E7F92B940208001BE789 /* Auth */,
 				3EDAD69B2B652C13000071B6 /* Map */,
 				3EDAD69C2B652C35000071B6 /* FavoriteShops */,
+				3EE3E7FC2B940235001BE789 /* Components */,
 				3EDAD69D2B652C4E000071B6 /* Common */,
 			);
 			path = Views;
@@ -243,6 +251,24 @@
 			);
 			path = Common;
 			sourceTree = "<group>";
+		};
+		3EE3E7F92B940208001BE789 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				3EE3E7FA2B940208001BE789 /* SignInView.swift */,
+				3EE3E7FF2B94030C001BE789 /* SignUpView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		3EE3E7FC2B940235001BE789 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3EE3E7FD2B940235001BE789 /* InputView.swift */,
+			);
+			name = Components;
+			path = BurgerMap/Views/Components;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -357,12 +383,15 @@
 				3EA9F0782B4C007C002206EE /* ShopAPIClient.swift in Sources */,
 				3EA9F0702B4BF24C002206EE /* Stateful.swift in Sources */,
 				3EA9F06B2B4BA17F002206EE /* IndicatorView.swift in Sources */,
+				3EE3E8002B94030C001BE789 /* SignUpView.swift in Sources */,
+				3EE3E7FB2B940208001BE789 /* SignInView.swift in Sources */,
 				3EA9F0502B468EA3002206EE /* BurgerMapApp.swift in Sources */,
 				3EDAD69A2B652AB5000071B6 /* FavoriteShopsView.swift in Sources */,
 				3EE15B1E2B6E279900BB72A9 /* AppDelegate.swift in Sources */,
 				3EA9F0612B4B91FA002206EE /* Shop.swift in Sources */,
 				3E7F72A92B5CF90E00922DB8 /* BottomSheetView.swift in Sources */,
 				3EA9F0752B4C0006002206EE /* ShopViewModel.swift in Sources */,
+				3EE3E7FE2B940235001BE789 /* InputView.swift in Sources */,
 				3EA9F0632B4B9331002206EE /* Shop+mock.swift in Sources */,
 				3EA9F07A2B4C093C002206EE /* LocationManager.swift in Sources */,
 			);
