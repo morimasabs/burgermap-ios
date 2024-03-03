@@ -27,6 +27,13 @@ struct MainView: View {
                             Text("お気に入り")
                         }
                     }
+                ProfileView()
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "person.fill")
+                            Text("プロフィール")
+                        }
+                    }
             }
         } else {
             SignInView()
@@ -36,4 +43,5 @@ struct MainView: View {
 
 #Preview {
     MainView()
+        .environmentObject(AuthViewModel())
 }
