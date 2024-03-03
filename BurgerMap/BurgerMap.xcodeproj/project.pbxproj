@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E6DA5842B940B530091C8A6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6DA5832B940B530091C8A6 /* ProfileView.swift */; };
+		3E6DA5862B940E020091C8A6 /* SettingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6DA5852B940E020091C8A6 /* SettingRowView.swift */; };
 		3E7F72A92B5CF90E00922DB8 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F72A82B5CF90E00922DB8 /* BottomSheetView.swift */; };
 		3EA9F0502B468EA3002206EE /* BurgerMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9F04F2B468EA3002206EE /* BurgerMapApp.swift */; };
 		3EA9F0522B468EA3002206EE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9F0512B468EA3002206EE /* MainView.swift */; };
@@ -61,6 +63,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E6DA5832B940B530091C8A6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		3E6DA5852B940E020091C8A6 /* SettingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRowView.swift; sourceTree = "<group>"; };
 		3E7F72A82B5CF90E00922DB8 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		3EA9F04C2B468EA3002206EE /* BurgerMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurgerMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA9F04F2B468EA3002206EE /* BurgerMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMapApp.swift; sourceTree = "<group>"; };
@@ -126,6 +130,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E6DA5822B940B410091C8A6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3E6DA5832B940B530091C8A6 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		3EA9F0432B468EA3002206EE = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +194,7 @@
 		3EA9F0642B4B97C8002206EE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3E6DA5822B940B410091C8A6 /* Profile */,
 				3EA9F0512B468EA3002206EE /* MainView.swift */,
 				3EE3E7F92B940208001BE789 /* Auth */,
 				3EDAD69B2B652C13000071B6 /* Map */,
@@ -265,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				3EE3E7FD2B940235001BE789 /* InputView.swift */,
+				3E6DA5852B940E020091C8A6 /* SettingRowView.swift */,
 			);
 			name = Components;
 			path = BurgerMap/Views/Components;
@@ -375,6 +389,7 @@
 			files = (
 				3EA9F0522B468EA3002206EE /* MainView.swift in Sources */,
 				3EA9F0722B4BFA21002206EE /* FailureView.swift in Sources */,
+				3E6DA5842B940B530091C8A6 /* ProfileView.swift in Sources */,
 				3EA9F05E2B4691BC002206EE /* MapView.swift in Sources */,
 				3EA9F07C2B4C0C55002206EE /* CLLocationCoordinate2D+Sample.swift in Sources */,
 				3EA9F06D2B4BCE1C002206EE /* Credentials.swift in Sources */,
@@ -383,6 +398,7 @@
 				3EA9F0782B4C007C002206EE /* ShopAPIClient.swift in Sources */,
 				3EA9F0702B4BF24C002206EE /* Stateful.swift in Sources */,
 				3EA9F06B2B4BA17F002206EE /* IndicatorView.swift in Sources */,
+				3E6DA5862B940E020091C8A6 /* SettingRowView.swift in Sources */,
 				3EE3E8002B94030C001BE789 /* SignUpView.swift in Sources */,
 				3EE3E7FB2B940208001BE789 /* SignInView.swift in Sources */,
 				3EA9F0502B468EA3002206EE /* BurgerMapApp.swift in Sources */,
