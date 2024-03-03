@@ -8,22 +8,28 @@
 import SwiftUI
 
 struct MainView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
-        TabView {
-            MapView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "map.fill")
-                        Text("地図")
+        if viewModel.userSession != nil {
+            TabView {
+                MapView()
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "map.fill")
+                            Text("地図")
+                        }
                     }
-                }
-            FavoriteShopsView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "heart.fill")
-                        Text("お気に入り")
+                FavoriteShopsView()
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "heart.fill")
+                            Text("お気に入り")
+                        }
                     }
-                }
+            }
+        } else {
+            SignInView()
         }
     }
 }

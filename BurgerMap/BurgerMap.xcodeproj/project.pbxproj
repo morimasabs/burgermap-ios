@@ -11,6 +11,7 @@
 		3E6DA5862B940E020091C8A6 /* SettingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6DA5852B940E020091C8A6 /* SettingRowView.swift */; };
 		3E6DA5882B94296D0091C8A6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6DA5872B94296D0091C8A6 /* User.swift */; };
 		3E6DA58A2B942DC90091C8A6 /* User+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6DA5892B942DC90091C8A6 /* User+mock.swift */; };
+		3E6DA58C2B9431210091C8A6 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6DA58B2B9431210091C8A6 /* AuthViewModel.swift */; };
 		3E7F72A92B5CF90E00922DB8 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7F72A82B5CF90E00922DB8 /* BottomSheetView.swift */; };
 		3EA9F0502B468EA3002206EE /* BurgerMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9F04F2B468EA3002206EE /* BurgerMapApp.swift */; };
 		3EA9F0522B468EA3002206EE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA9F0512B468EA3002206EE /* MainView.swift */; };
@@ -69,6 +70,7 @@
 		3E6DA5852B940E020091C8A6 /* SettingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRowView.swift; sourceTree = "<group>"; };
 		3E6DA5872B94296D0091C8A6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3E6DA5892B942DC90091C8A6 /* User+mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+mock.swift"; sourceTree = "<group>"; };
+		3E6DA58B2B9431210091C8A6 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		3E7F72A82B5CF90E00922DB8 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		3EA9F04C2B468EA3002206EE /* BurgerMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurgerMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA9F04F2B468EA3002206EE /* BurgerMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerMapApp.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				3EA9F0742B4C0006002206EE /* ShopViewModel.swift */,
+				3E6DA58B2B9431210091C8A6 /* AuthViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				3E6DA5882B94296D0091C8A6 /* User.swift in Sources */,
 				3EE3E7FE2B940235001BE789 /* InputView.swift in Sources */,
 				3EA9F0632B4B9331002206EE /* Shop+mock.swift in Sources */,
+				3E6DA58C2B9431210091C8A6 /* AuthViewModel.swift in Sources */,
 				3EA9F07A2B4C093C002206EE /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,9 +12,12 @@ struct BurgerMapApp: App {
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
+    @StateObject var authViewModel = AuthViewModel()
+    
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(authViewModel)
         }
     }
 }
