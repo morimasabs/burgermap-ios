@@ -27,6 +27,7 @@ struct SignInView: View {
                               title: "Password",
                               placeholder: "Enter your password",
                               isSecureField: true)
+                    .textInputAutocapitalization(.never)
                 }
                 .padding(.horizontal)
                 .padding(.top, 12)
@@ -36,7 +37,7 @@ struct SignInView: View {
                     print("Log user in ...")
                 } label: {
                     HStack {
-                        Text("サインイン")
+                        Text("ログイン")
                             .fontWeight(.semibold)
                         Image(systemName: "arrow.right")
                     }
