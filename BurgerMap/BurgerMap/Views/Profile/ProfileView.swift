@@ -56,7 +56,9 @@ struct ProfileView: View {
                     }
                     
                     Button {
-                        print("Delete accout..")
+                        Task {
+                            await viewModel.deleteAccount()
+                        }
                     } label: {
                         SettingRowView(imageName: "xmark.circle.fill", title: "退会する", tintColor: .red)
                     }
