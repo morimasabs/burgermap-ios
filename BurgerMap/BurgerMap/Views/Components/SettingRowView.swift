@@ -27,5 +27,5 @@ struct SettingRowView: View {
 }
 
 #Preview {
-    SettingRowView(imageName: "gear", title: "Version", tintColor: Color(.systemGray))
+    SettingRowView(imageName: "gear", title: R.string.localizable.version(), tintColor: Color(.systemGray))
 }

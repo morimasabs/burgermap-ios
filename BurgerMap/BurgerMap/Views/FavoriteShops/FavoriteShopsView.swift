@@ -16,7 +16,7 @@ struct FavoriteShopsView: View {
                 FavoriteShopCell(shop: shop)
             }
             .listStyle(.plain)
-            .navigationTitle("お気に入り")
+            .navigationTitle(R.string.localizable.favorite())
             .navigationBarTitleDisplayMode(.inline)
         }
     }

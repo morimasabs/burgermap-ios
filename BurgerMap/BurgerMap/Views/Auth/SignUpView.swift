@@ -23,24 +23,24 @@ struct SignUpView: View {
                 // form fields
                 VStack(spacing: 24) {
                     InputView(text: $email,
-                              title: "Email Address",
-                              placeholder: "name@example.com")
+                              title: R.string.localizable.emailAddress(),
+                              placeholder: R.string.localizable.emailPlaceHolder())
                     .textInputAutocapitalization(.never)
                     
                     InputView(text: $fullName,
-                              title: "Full Name",
-                              placeholder: "Enter your password")
+                              title: R.string.localizable.nickname(),
+                              placeholder: R.string.localizable.enterNickname())
                     
                     InputView(text: $password,
-                              title: "Password",
-                              placeholder: "Enter your password",
+                              title: R.string.localizable.password(),
+                              placeholder: R.string.localizable.enterPassword(),
                               isSecureField: true)
                     .textInputAutocapitalization(.never)
                     
                     ZStack(alignment: .trailing) {
                         InputView(text: $confirmPassword,
-                                  title: "Confirm Password",
-                                  placeholder: "Enter your password",
+                                  title: R.string.localizable.confirmPassword(),
+                                  placeholder: R.string.localizable.enterConfirmPassword(),
                                   isSecureField: true)
                         .textInputAutocapitalization(.never)
                         
@@ -70,7 +70,7 @@ struct SignUpView: View {
                     print("Sign user up ...")
                 } label: {
                     HStack {
-                        Text("会員登録")
+                        Text(R.string.localizable.signUp())
                             .fontWeight(.semibold)
                         Image(systemName: "arrow.right")
                     }
@@ -90,8 +90,8 @@ struct SignUpView: View {
                 dismiss()
             } label: {
                 HStack(spacing: 3) {
-                    Text("既にアカウントをお持ちですか？")
-                    Text("ログイン")
+                    Text(R.string.localizable.alreadyHaveAccount())
+                    Text(R.string.localizable.signIn())
                         .fontWeight(.bold)
                 }
                 .font(.system(size: 14))

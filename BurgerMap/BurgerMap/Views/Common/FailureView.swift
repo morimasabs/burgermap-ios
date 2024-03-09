@@ -12,10 +12,10 @@ struct FailureView: View {
 
     var body: some View {
         VStack {
-            Text("通信に失敗しました")
+            Text(R.string.localizable.connectionFailure())
                 .font(.title2)
             Button(action: action) {
-                Text("リトライ")
+                Text(R.string.localizable.retry())
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -1,0 +1,45 @@
+/* 
+  Localizable.strings
+  BurgerMap
+
+  Created by Masahito Mori on 2024/03/09.
+  
+*/
+
+// General
+"cancel" = "Cancel";
+"retry" = "Retry";
+"loading" = "loading...";
+"connectionFailure" = "Connection failed";
+
+// Map
+"map" = "Map";
+"address" = "Address";
+"operatingHours" = "Operating hours";
+"RegularHoliday" = "Regular horiday";
+
+// Favorites
+"favorite" = "Favorite";
+
+// Profile
+"profile" = "Profile";
+"general" = "General";
+"version" = "Version";
+"account" = "Account";
+"deleteAccount" = "Delete account";
+"deleteAccountConfirmation" = "Do you want to delete your account?";
+
+// Authentication
+"signUp" = "Sign up";
+"signIn" = "Sign in";
+"signOut" = "Sign out";
+"emailAddress" = "Email address";
+"emailPlaceHolder" = "name@example.com";
+"nickname" = "Nickname";
+"enterNickname" = "Enter your nickname";
+"password" = "Password";
+"enterPassword" = "Enter your password";
+"confirmPassword" = "Confirm Password";
+"enterConfirmPassword" = "Enter your confirm password";
+"forgotPassword" = "Forgot password?";
+"alreadyHaveAccount" = "Already Have an Account?";

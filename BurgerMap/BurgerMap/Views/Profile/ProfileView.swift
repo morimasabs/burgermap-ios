@@ -37,9 +37,9 @@ struct ProfileView: View {
                     }
                 }
                 
-                Section("General") {
+                Section(R.string.localizable.general()) {
                     HStack {
-                        SettingRowView(imageName: "gear", title: "バージョン", tintColor: Color(.systemGray))
+                        SettingRowView(imageName: "gear", title: R.string.localizable.version(), tintColor: Color(.systemGray))
                         
                         Spacer()
                         
@@ -49,11 +49,11 @@ struct ProfileView: View {
                     }
                 }
                 
-                Section("Account") {
+                Section(R.string.localizable.account()) {
                     Button {
                         viewModel.singOut()
                     } label: {
-                        SettingRowView(imageName: "arrow.left.circle.fill", title: "ログアウト", tintColor: .red)
+                        SettingRowView(imageName: "arrow.left.circle.fill", title: R.string.localizable.signOut(), tintColor: .red)
                     }
                     
                     Button {
@@ -61,11 +61,11 @@ struct ProfileView: View {
                             isShowAlert.toggle()
                         }
                     } label: {
-                        SettingRowView(imageName: "xmark.circle.fill", title: "退会する", tintColor: .red)
+                        SettingRowView(imageName: "xmark.circle.fill", title: R.string.localizable.deleteAccount(), tintColor: .red)
                     }
-                    .alert("退会しますか？", isPresented: $isShowAlert) {
-                        Button("キャンセル", role: .cancel) {}
-                        Button("退会する", role: .destructive) {
+                    .alert(R.string.localizable.deleteAccountConfirmation(), isPresented: $isShowAlert) {
+                        Button(R.string.localizable.cancel(), role: .cancel) {}
+                        Button(R.string.localizable.deleteAccount(), role: .destructive) {
                             Task {
                                 await viewModel.deleteAccount()
                             }

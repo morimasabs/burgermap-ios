@@ -13,17 +13,17 @@ struct BottomSheetView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Image("BurgerIcon")
+                Image(R.image.burgerIcon)
                 Text(shop.name)
                     .font(.system(size: 20))
                     .fontWeight(.heavy)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            SectionView(title: "住所")
+            SectionView(title: R.string.localizable.address())
             InSectionView(description: shop.address)
-            SectionView(title: "営業時間")
+            SectionView(title: R.string.localizable.operatingHours())
             InSectionView(description: shop.open)
-            SectionView(title: "定休日")
+            SectionView(title: R.string.localizable.regularHoliday())
             InSectionView(description: shop.close)
         }
         .padding(.horizontal, 20)
