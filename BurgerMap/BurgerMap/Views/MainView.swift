@@ -2,7 +2,7 @@
 //  MainView.swift
 //  BurgerMap
 //
-//  Created by Masahito Mori on 2024/01/04.
+//  Created by Masahito Mori on 2024/03/03.
 //
 
 import SwiftUI
@@ -22,6 +22,13 @@ struct MainView: View {
                     VStack {
                         Image(systemName: "heart.fill")
                         Text("お気に入り")
+                    }
+                }
+            ProfileView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "person.fill")
+                        Text("プロフィール")
                     }
                 }
         }
