@@ -12,7 +12,7 @@ struct FavoriteShopCell: View {
     
     var body: some View {
         HStack {
-            Image("BurgerIcon")
+            Image(R.image.burgerIcon)
             VStack(alignment: .leading) {
                 Text(shop.name)
                     .font(.system(size: 20))

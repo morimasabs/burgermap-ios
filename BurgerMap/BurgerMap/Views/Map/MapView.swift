@@ -22,7 +22,7 @@ struct MapView: View {
                 }
                 ForEach(viewModel.shops) { shop in
                     Annotation("", coordinate: shop.coordinate) {
-                        Image("MapBurgerIcon")
+                        Image(R.image.mapBurgerIcon)
                             .onTapGesture {
                                 selectedShop = shop
                                 showBottomSheet = true
