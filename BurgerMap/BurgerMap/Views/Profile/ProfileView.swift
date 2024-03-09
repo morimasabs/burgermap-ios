@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     @EnvironmentObject var viewModel: AuthViewModel
+    @State var isShowAlert = false
     
     var body: some View {
         if let user = viewModel.currentUser {
@@ -57,10 +58,18 @@ struct ProfileView: View {
                     
                     Button {
                         Task {
-                            await viewModel.deleteAccount()
+                            isShowAlert.toggle()
                         }
                     } label: {
                         SettingRowView(imageName: "xmark.circle.fill", title: "退会する", tintColor: .red)
+                    }
+                    .alert("退会しますか？", isPresented: $isShowAlert) {
+                        Button("キャンセル", role: .cancel) {}
+                        Button("退会する", role: .destructive) {
+                            Task {
+                                await viewModel.deleteAccount()
+                            }
+                        }
                     }
                 }
             }
