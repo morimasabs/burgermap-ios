@@ -37,11 +37,27 @@ struct SignUpView: View {
                               isSecureField: true)
                     .textInputAutocapitalization(.never)
                     
-                    InputView(text: $confirmPassword,
-                              title: "Confirm Password",
-                              placeholder: "Enter your password",
-                              isSecureField: true)
-                    .textInputAutocapitalization(.never)
+                    ZStack(alignment: .trailing) {
+                        InputView(text: $confirmPassword,
+                                  title: "Confirm Password",
+                                  placeholder: "Enter your password",
+                                  isSecureField: true)
+                        .textInputAutocapitalization(.never)
+                        
+                        if !password.isEmpty && !confirmPassword.isEmpty {
+                            if password == confirmPassword {
+                                Image(systemName: "checkmark.circle.fill")
+                                    .imageScale(.large)
+                                    .fontWeight(.bold)
+                                    .foregroundStyle(Color(.systemGreen))
+                            } else {
+                                Image(systemName: "xmark.circle.fill")
+                                    .imageScale(.large)
+                                    .fontWeight(.bold)
+                                    .foregroundStyle(Color(.systemRed))
+                            }
+                        }
+                    }
                 }
                 .padding(.horizontal)
                 .padding(.top, 12)
