@@ -33,7 +33,8 @@ struct SignUpView: View {
                     
                     InputView(text: $password,
                               title: "Password",
-                              placeholder: "Enter your password")
+                              placeholder: "Enter your password",
+                              isSecureField: true)
                     .textInputAutocapitalization(.never)
                     
                     InputView(text: $confirmPassword,
