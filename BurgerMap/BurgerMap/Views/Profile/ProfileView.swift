@@ -62,6 +62,12 @@ struct ProfileView: View {
                     }
                 }
             }
+        } else {
+            FailureView {
+                Task {
+                    await viewModel.fetchUser()
+                }
+            }
         }
     }
 }
