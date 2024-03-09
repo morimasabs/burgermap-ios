@@ -1,0 +1,45 @@
+/* 
+  Localizable.strings
+  BurgerMap
+
+  Created by Masahito Mori on 2024/03/09.
+  
+*/
+
+// 汎用
+"cancel" = "キャンセル";
+"retry" = "リトライ";
+"loading" = "ロード中...";
+"connectionFailure" = "通信に失敗しました";
+
+// 地図
+"map" = "地図";
+"address" = "住所";
+"operatingHours" = "営業時間";
+"RegularHoliday" = "定休日";
+
+// お気に入り
+"favorite" = "お気に入り";
+
+// プロフィール
+"profile" = "プロフィール";
+"general" = "全般";
+"version" = "バージョン";
+"account" = "アカウント";
+"deleteAccount" = "退会する";
+"deleteAccountConfirmation" = "退会しますか？";
+
+// 認証
+"signUp" = "会員登録";
+"signIn" = "ログイン";
+"signOut" = "ログアウト";
+"emailAddress" = "メールアドレス";
+"emailPlaceHolder" = "name@example.com";
+"nickname" = "ニックネーム";
+"enterNickname" = "ニックネームを入力";
+"password" = "パスワード";
+"enterPassword" = "パスワードを入力";
+"confirmPassword" = "パスワード（確認用）";
+"enterConfirmPassword" = "パスワードを入力（確認用）";
+"forgotPassword" = "パスワードをお忘れですか？";
+"alreadyHaveAccount" = "既にアカウントをお持ちですか？";

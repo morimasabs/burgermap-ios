@@ -14,21 +14,21 @@ struct MainView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "map.fill")
-                        Text("地図")
+                        Text(R.string.localizable.map())
                     }
                 }
             FavoriteShopsView()
                 .tabItem {
                     VStack {
                         Image(systemName: "heart.fill")
-                        Text("お気に入り")
+                        Text(R.string.localizable.favorite())
                     }
                 }
             ProfileView()
                 .tabItem {
                     VStack {
                         Image(systemName: "person.fill")
-                        Text("プロフィール")
+                        Text(R.string.localizable.profile())
                     }
                 }
         }

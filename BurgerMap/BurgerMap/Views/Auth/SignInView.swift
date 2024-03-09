@@ -20,13 +20,13 @@ struct SignInView: View {
                 // form fields
                 VStack(spacing: 24) {
                     InputView(text: $email,
-                              title: "Email Address",
-                              placeholder: "name@example.com")
+                              title: R.string.localizable.emailAddress(),
+                              placeholder: R.string.localizable.emailPlaceHolder())
                     .textInputAutocapitalization(.never)
                     
                     InputView(text: $password,
-                              title: "Password",
-                              placeholder: "Enter your password",
+                              title: R.string.localizable.password(),
+                              placeholder: R.string.localizable.enterPassword(),
                               isSecureField: true)
                     .textInputAutocapitalization(.never)
                 }
@@ -40,7 +40,7 @@ struct SignInView: View {
                     }
                 } label: {
                     HStack {
-                        Text("ログイン")
+                        Text(R.string.localizable.signIn())
                             .fontWeight(.semibold)
                         Image(systemName: "arrow.right")
                     }
@@ -60,8 +60,8 @@ struct SignInView: View {
                         .navigationBarBackButtonHidden()
                 } label: {
                     HStack(spacing: 3) {
-                        Text("パスワードをお忘れですか？")
-                        Text("会員登録")
+                        Text(R.string.localizable.forgotPassword())
+                        Text(R.string.localizable.signUp())
                             .fontWeight(.bold)
                     }
                     .font(.system(size: 14))

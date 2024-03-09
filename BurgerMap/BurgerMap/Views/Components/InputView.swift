@@ -34,5 +34,5 @@ struct InputView: View {
 }
 
 #Preview {
-    InputView(text: .constant(""), title: "Email Address", placeholder: "name@example.com")
+    InputView(text: .constant(""), title: R.string.localizable.emailAddress(), placeholder: R.string.localizable.emailPlaceHolder())
 }
